@@ -1,0 +1,615 @@
+:root {
+  --primary: #b6895b;
+  --bg: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "poppons", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.4rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.1rem;
+  border-bottom: 0.1rem solid#fff;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../asset/img/1.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 9%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 5em;
+  color: #222;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: #436fbc;
+}
+
+.hero .content p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  font-weight: 60;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  mix-blend-mode: difference;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  color: #fff;
+  background-color: #436fbc;
+  font-size: 1.4rem;
+  border-radius: 10%;
+}
+
+/* about section */
+.about,
+.service,
+.contact {
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h2,
+.service h2,
+.contact h2,
+.testi h2,
+.FAQ h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.about h2 span,
+.service h2 span,
+.contact h2 span,
+.testi h2 span,
+.FAQ h2 span {
+  color: var(--primary);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 40rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 30rem;
+  padding: 0 1.5rem;
+}
+
+.about .content h3 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 1.8rem;
+}
+
+.about .content p {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  font-weight: 100;
+}
+
+/* service section */
+.service p,
+.contact p {
+  text-align: center;
+  max-width: 30%;
+  margin: auto;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 100;
+}
+
+.service .row {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.service .row .card-menu {
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+.service .row .card-menu img {
+  border-radius: 10%;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  height: 15rem;
+  width: 16rem;
+}
+
+.service .row .card-menu .card-title {
+  margin: 1.5rem auto 0.5rem;
+  font-size: 1.5rem;
+}
+
+.service .row .card-menu .card-price {
+  font-size: 1.5rem;
+  padding-top: 2rem;
+  font-weight: bold;
+}
+
+.service .row .card-menu .card-price span {
+  font-size: 1.1rem;
+  text-decoration: line-through;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.service .row .card-menu .produk-star {
+  padding-top: 1rem;
+}
+
+.service .row .card-menu .produk-star .star {
+  fill: var(--primary);
+}
+
+/* testi section */
+.testi {
+  margin-top: 3rem;
+}
+
+.testi .card {
+  display: flex;
+  justify-content: center;
+}
+
+.testi .card-body {
+  background-color: #222;
+  height: 30rem;
+  width: 98rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.testi .card-body img {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 3rem;
+}
+
+.testi .card-body .cust .foto {
+   justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.testi .card-body .cust p {
+  font-size: 1.8rem;
+  margin-top: 4rem;
+}
+
+.testi .card-body .cust h4 {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+   justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.testi .card-body .produk-star {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.testi .card-body .produk-star .star {
+  fill: var(--primary);
+  margin-top: 2.6rem;
+}
+
+.testi .card-body /* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.testi .card-body /* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+  left: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* FAQ section */
+.FAQ {
+  margin-top: 5rem;
+}
+
+.FAQ .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FAQ .card .card-body {
+  background-color: #222;
+  height: 30rem;
+  width: 98rem;
+  padding-left: 3.4rem;
+  padding-top: 3rem;
+}
+
+.FAQ .card .card-body .tombol {
+  height: 4rem;
+  width: 20rem;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 1rem;
+  border-radius: 9px;
+}
+
+.FAQ .card .card-body .tombol:hover {
+  background-color: #fff;
+  color: var(--primary);
+}
+
+.FAQ .card-body #myPayment,
+#myArea, #myAlat,#myOrder {
+  width: 40%;
+  text-align: center;
+  background-color: #fff;
+  margin-top: 20px;
+  font-size: 1.6rem;
+  color: #010101;
+  display: none;
+}
+
+
+
+/* contact section */
+.contact .row {
+  display: flex;
+  margin-top: 3rem;
+  background-color: #222;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 3rem;
+  text-align: center;
+}
+
+.contact .row form .input-grup {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--bg);
+  border: 1px solid #eee;
+  padding-left: 2rem;
+}
+
+.contact .row form .input-grup input {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  background: none;
+  color: #fff;
+}
+
+.contact .row form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1.5rem 2.5rem;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* footer */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+}
+
+footer .wa {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+z-index: 999;
+}
+
+footer .wa a {
+  font-size: 6rem;
+  display: block;
+}
+
+footer .sosials {
+  padding: 0.5rem;
+}
+
+footer .sosials a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .sosials a:hover {
+  color: var(--bg);
+}
+
+footer .links {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+footer .links a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .links a:hover {
+  color: var(--bg);
+}
+
+footer .credit p {
+  padding: 1.5rem;
+  font-size: 1.2rem;
+}
+
+footer .credit p a {
+  color: var(--bg);
+}
+
+footer p a:hover {
+  color: #fff;
+}
+
+/* media queries */
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.6rem;
+  }
+
+  .service .row {
+    flex-wrap: wrap;
+  }
+
+  .service .row .card-menu .icon {
+    font-size: 1.6rem;
+  }
+
+  .service .row .card-menu h4 {
+    font-size: 1.3rem;
+  }
+
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .contact .row .map {
+    height: 30rem;
+  }
+
+  .contact .row form {
+    padding-top: 0;
+  }
+}
+
+/* mobile phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
