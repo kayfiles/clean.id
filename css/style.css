@@ -139,7 +139,7 @@ body {
   display: inline-block;
   padding: 1rem 3rem;
   color: #fff;
-  background-color: #436fbc;
+  background-color: red;
   font-size: 1.4rem;
   border-radius: 10%;
 }
@@ -592,6 +592,14 @@ footer p a:hover {
 
   .service .row .card-menu h4 {
     font-size: 1.3rem;
+  }
+
+  .testi .card-body {
+    width: 48rem;
+  }
+
+  .FAQ .card-body {
+    width: 48rem;
   }
 
   .contact .row {
